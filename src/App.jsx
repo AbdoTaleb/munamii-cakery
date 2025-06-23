@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from "./components/Header/Header";
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
+import Products from './pages/Products/Products';
 
 
 
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Products />} />
       </Routes>
     </Router>
   );
