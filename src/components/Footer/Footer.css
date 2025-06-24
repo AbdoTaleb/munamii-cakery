@@ -1,0 +1,30 @@
+
+
+.footer {
+  background-color: #ffeff7;
+  padding: 1.5rem;
+  text-align: center;
+  color: #333;
+  font-size: 0.95rem;
+  margin-top: 4rem;
+  border-top: 1px solid #e3cfe3;
+}
+
+.footer .social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.footer .social-links a {
+  color: #ff69b4;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.footer .social-links a:hover {
+  text-decoration: underline;
+}

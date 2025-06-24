@@ -10,7 +10,13 @@ function Contact() {
     e.preventDefault();
 
     emailjs
-        .sendForm('service_2jlcgs9', 'template_x7v4wlt', form.current, 'AUAgybu-2xfeZWk89')
+        emailjs.sendForm(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          form.current,
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
+
         .then(
         (result) => {
             alert('Message sent!');
