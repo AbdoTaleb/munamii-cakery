@@ -1,80 +1,68 @@
-
 import './Contact.css';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 
 function Contact() {
-    const form = useRef();
+  const form = useRef();
 
-    const sendEmail = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-        emailjs.sendForm(
-          import.meta.env.VITE_EMAILJS_SERVICE_ID,
-          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-          form.current,
-          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-        )
-
-        .then(
-        (result) => {
-            alert('Message sent!');
-        },
-        (error) => {
-            alert('Failed to send. Please try again.');
-        }
-        );
-    };
+      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+      .then(
+        () => alert('Message sent!'),
+        () => alert('Failed to send. Please try again.')
+      );
+  };
 
   return (
     <main className="contact">
       <h2>Contact</h2>
 
-      <section className="contact-info">
-        <p>
-          <strong>📦 Home delivery service:</strong><br />
-          All the city of Stockholm and Malmö (with additional cost).
-        </p>
+      <div className="contact-container">
+        <section className="contact-info">
+          <div className="contact-box">
+            <p><strong>Home delivery service:</strong></p>
+            <p>All the city of Stockholm and Malmö (with additional cost).</p>
+          </div>
 
-        <p>
-          <strong>📍 Pickup address:</strong><br />
-          Via la Costa Avenue. Blue Port gated neighbourhood.<br />
-          GPS location will be sent via WhatsApp.
-        </p>
+          <div className="contact-box">
+            <p><strong>Pickup address:</strong></p>
+            <p>Via la Costa Avenue. Blue Port gated neighbourhood.</p>
+            <p>GPS location will be sent via WhatsApp.</p>
+          </div>
 
-        <p>
-          <strong>📅 Orders:</strong><br />
-          Must be placed 2 days in advance for availability and planning.
-        </p>
+          <div className="contact-box">
+            <p><strong>Orders:</strong></p>
+            <p>Must be placed 2 days in advance for availability and planning.</p>
+          </div>
 
-        <p>
-          <strong>⏰ Opening hours:</strong><br />
-          Tuesday to Saturday, 9 a.m. to 2 p.m.
-        </p>
-      </section>
-      <section className="contact-form">
-        <h3>Send us a message</h3>
-        <form ref={form} onSubmit={sendEmail}>
+          <div className="contact-box">
+            <p><strong>Opening hours:</strong></p>
+            <p>Tuesday to Saturday, 9 a.m. to 2 p.m.</p>
+          </div>
+        </section>
+
+        <section className="contact-form">
+          <h3>Send us a message</h3>
+          <form ref={form} onSubmit={sendEmail}>
             <label>
-                Your Name:
-                <input type="text" name="user_name" required />
+              Your Name:
+              <input type="text" name="user_name" required />
             </label>
-
             <label>
-                Your Email:
-                <input type="email" name="user_email" required />
+              Your Email:
+              <input type="email" name="user_email" required />
             </label>
-
             <label>
-                Message:
-                <textarea name="message" rows="5" required></textarea>
+              Message:
+              <textarea name="message" rows="5" required></textarea>
             </label>
-
             <button type="submit">Send</button>
-        </form>
-    </section>
-
+          </form>
+        </section>
+      </div>
     </main>
   );
 }

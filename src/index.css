@@ -5,6 +5,7 @@ body, #root {
   display: flex;
   flex-direction: column;
   margin: 0;
+  background-color: #FFF2EB;
 }
 
 
@@ -18,3 +19,8 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+main {
+  flex: 1;
+}
+

@@ -1,17 +1,18 @@
-import React from 'react'
+import './About.css';
 
-const About = () => {
+function About() {
   return (
-    <main className='about'>
-        <h2>About Munamii Cakery</h2>
-        <p>
-            At Munamii Cakery, each cake, each box of cupcakes that we make has a very special value for us.
-            We not only want to bring a dessert to your table but rather a unique experience for you,
-            which will become an unforgettable memory. We have been in the pastry market for more than 8 years
-            and now we offer you a new way to shop through our website.
-        </p>
+    <main className="about">
+      <h2>About Munamii Cakery</h2>
+      <p>
+        At <strong>Munamii Cakery</strong>, each cake and cupcake is crafted with love, care, and a sprinkle of magic.
+        Our mission is not only to satisfy your sweet cravings but also to deliver an experience you’ll always remember.
+        <br /><br />
+        For over 8 years, we've been serving delightful pastries that bring joy to birthdays, weddings, and everyday moments.
+        Now, we're proud to bring that same sweetness to your doorstep through our online shop.
+      </p>
     </main>
-  )
+  );
 }
 
-export default About
+export default About;

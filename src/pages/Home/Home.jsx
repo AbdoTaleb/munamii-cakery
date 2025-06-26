@@ -1,15 +1,24 @@
-import React from 'react'
-import './Home.css'
-const Home = () => {
+import './Home.css';
+import ProductCard from '../../components/ProductCard/ProductCard';
+import { cupcakes, weddingCakes } from '../../data/productData';
+
+const allProducts = [...cupcakes, ...weddingCakes];
+
+
+
+function Home() {
   return (
-    <main className='home'>
-        <h2>Hi! Welcome to Munamii Cakery!</h2>
-        <p>
-            We offer you the most delicious cakes and cupcakes for all kinds of events and celebrations.
-            Browse around to discover what you would like to buy.
-        </p>
+    <main className="home">
+      <h2>Welcome to Munamii Cakery!</h2>
+      <p>Delicious cupcakes and elegant wedding cakes for every occasion.</p>
+
+      <div className="home-products">
+        {allProducts.map((item) => (
+          <ProductCard key={item.id} {...item} />
+        ))}
+      </div>
     </main>
-  )
+  );
 }
 
-export default Home
+export default Home;
