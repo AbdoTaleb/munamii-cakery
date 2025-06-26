@@ -10,7 +10,7 @@ export const cupcakes = [
 ];
 
 export const weddingCakes = [
-  { id: 1, title: 'Elegant Rose', price: '$150', image: import.meta.env.BASE_URL + 'images/cakes/cake1.jpg' },
+  { id: 1, title: 'Elegant Rose', price: '$150', image: `${import.meta.env.BASE_URL}images/cupcakes/cupcake1.jpg` },
   { id: 2, title: 'White Bloom', price: '$200', image: import.meta.env.BASE_URL + 'images/cakes/cake2.jpg' },
   { id: 3, title: 'Golden Charm', price: '$250', image: import.meta.env.BASE_URL + 'images/cakes/cake3.jpg' },
   { id: 4, title: 'Rustic Love', price: '$180', image: import.meta.env.BASE_URL + 'images/cakes/cake4.jpg' },

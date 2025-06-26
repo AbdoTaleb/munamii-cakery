@@ -9,7 +9,7 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/munamii-cakery">
       <Header />
       
       <Routes>
