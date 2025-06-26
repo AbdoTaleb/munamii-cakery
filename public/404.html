@@ -1,0 +1,6 @@
+<script>
+  // Redirect all 404s to index.html to allow client-side routing to handle it
+  var path = location.pathname + location.search + location.hash;
+  sessionStorage.redirect = path;
+  window.location.href = "/munamii-cakery/";
+</script>
