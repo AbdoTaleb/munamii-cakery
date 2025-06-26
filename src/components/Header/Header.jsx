@@ -15,7 +15,7 @@ function Header() {
     <header className="header">
       <nav className="navbar">
         <NavLink to="/" className="logo">
-          <img src="/images/logo.png" alt="Munamii Cakery logo" />
+          <img src="./images/logo.png" alt="Munamii Cakery logo" />
         </NavLink>
 
         <ul className="nav-links">
