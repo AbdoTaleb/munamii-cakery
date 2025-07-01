@@ -4,12 +4,19 @@ import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import './Header.css';
 
+import { useCart } from '../../contexts/CartContext';
+
+
 function Header() {
   const [showDropdown, setShowDropdown] = useState(false);
+  const { cart } = useCart();
+  
 
   const toggleDropdown = () => {
     setShowDropdown(prev => !prev);
   };
+
+  const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <header className="header">
@@ -49,6 +56,13 @@ function Header() {
               Contact
             </NavLink>
           </li>
+          <li>
+            <NavLink to="/cart" className="cart-link">
+              🛒
+              {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
+            </NavLink>
+          </li>
+
         </ul>
       </nav>
     </header>

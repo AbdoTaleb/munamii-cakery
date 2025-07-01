@@ -34,3 +34,42 @@
   color: #ff69b4;
   font-weight: bold;
 }
+
+.add-to-cart-btn {
+  background-color: #ff69b4;      /* وردي أنثوي */
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: inherit;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-to-cart-btn:hover {
+  background-color: #e0559e;
+  transform: scale(1.03);
+}
+
+.add-to-cart-btn:active {
+  background-color: #d14a92;
+  transform: scale(0.98);
+}
+
+.add-confirm {
+  color: green;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  animation: fade 1.5s ease-out;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+

@@ -3,7 +3,11 @@ import ProductCard from '../../components/ProductCard/ProductCard';
 import { cupcakes, weddingCakes } from '../../data/productData';
 import { useLocation } from 'react-router-dom';
 
+
 function Products() {
+  
+
+
   const location = useLocation();
   const query = new URLSearchParams(location.search);
   const selectedCategory = query.get('category') || 'cupcakes'; // fallback to cupcakes
