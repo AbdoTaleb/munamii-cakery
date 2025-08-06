@@ -8,7 +8,6 @@ Users can browse cupcakes and wedding cakes, add items to a cart, and contact th
 - 🧁 Product Categories (Cupcakes & Wedding Cakes)
 - 🛒 Add to Cart + Live Cart Count
 - 📩 Contact Form (with validation)
-- 🎨 Beautiful responsive design
 - 🌐 Deployed to Vercel
 
 ## 🚀 Live Demo
